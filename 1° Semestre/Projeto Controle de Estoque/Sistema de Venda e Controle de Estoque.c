@@ -26,7 +26,6 @@ void Vendedor();
 void CadastraVendedores();
 void ListarVendedores();
 
-
 void main(){ //função main
 	setlocale(LC_ALL, "portuguese"); //set linguagem
 	system("title Sistema para Comércios"); //título
@@ -337,8 +336,7 @@ void EditarProdutos(){ //Editar Produtos
 			break;
     	}
 		fgetpos(produtos, &posicao); //marca a posição
-	}while 
-		(fscanf(produtos, "%s %f %d %lld\n", produto, &preco, &qtd, &code) != EOF);
+	}while (fscanf(produtos, "%s %f %d %lld\n", produto, &preco, &qtd, &code) != EOF);
 	if(encontrado){
 		do{
 			system("cls"); //limpa terminal Windows
@@ -354,6 +352,7 @@ void EditarProdutos(){ //Editar Produtos
 			printf("\n4- Codigo do Produto");
 			printf("\n5- Voltar\n");
 			op = getch(); //retorna a tecla digitada sem mostra-la
+			fclose(produtos);
 			produtos = fopen("Dados/produtos.txt", "r+"); //abre arquivo produtos em modo de leitura
 			fsetpos(produtos, &posicao); //altera posição do fluxo
 		
@@ -382,8 +381,6 @@ void EditarProdutos(){ //Editar Produtos
 					fprintf(produtos, "\n%s %.2f %d %lld", produto, preco, qtd, code);
 					break; //fim case 4
 				case '5':
-					fclose(produtos); //fecha arquivo produtos
-					Estoque();
 					break; //fim case 5
 				default:	
 					printf("\n\nOpcao invalida! Tente Novamente!\n\n");
@@ -395,8 +392,9 @@ void EditarProdutos(){ //Editar Produtos
 			Beep(1500, 200); //beep com frequência de 1500Hz e duração de 200ms
 			printf("\n Produto Não Encontrado\n\n");
 			system("pause"); //pause a tela
-			Estoque(); //função para menu estoque
 		}
+		fclose(produtos); //fecha arquivo produtos
+		Estoque();
 }
 
 void ListarProdutos(){ //Listar Produtos
