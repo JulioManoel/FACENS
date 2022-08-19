@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <button onmouseover="mOver(this)" onmouseout="mOut(this)">Texto Padrão!!!</button>
+        <br><br>
+        <button onmousedown="mDown(this)" onmouseup="mUp(this)">Clicando com o mouse!!!</button>
+
+        <script>
+            function mOver(obj){
+                obj.innerHtml = "Obrigado - Entrei";
+            }
+
+            function mOut(obj){
+                obj.innerHtml = "Obrigado - SAI!!!";
+            }
+
+            function mUp(obj){
+                obj.innerHtml = "Soltei o clique do mouse!!"
+                obj.style.backgroundColor = "#FF0000";
+            }
+
+            function mDown(obj){
+                obj.innerHtml = "Presionei o clique do mouse";
+            }
+        </script>
+    </body>
+</html>

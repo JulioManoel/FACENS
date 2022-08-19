@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>On Change</title>
+        <script>
+            var x = document.getElementById("nome");
+            x.value = x.value.toUpperCase();
+
+            var maior = document.getElementById("maiuscula");
+            maior.innerHTML = x.value.toUpperCase();
+
+            var menor = document.getElementById("minuscula");
+            menor.innerHTML= x.value.toLowerCase()
+        </script>
+    </head>
+    <body>
+        Insira seu nome:
+        <input type="text" name="nome" id="nome" onchange="caixaAlta()">
+
+        <h2 id="maiuscula">MAIOR</h2>
+        <h2 id="minuscula">minuscula</h2>
+    </body>
+</html>

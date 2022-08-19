@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #myDiv{
+            border: 1px solid black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        <h2 class="exemplo">Texto h2</h2>
+        <p class="exemplo">Texto p</p>
+    </div>
+
+    <button onclick="minhaFuncao()">Clique Aqui</button>
+
+    <script>
+        function minhaFuncao(){
+            //var x = document.getElementById("myDiv");
+            var x,i;
+            x = document.querySelectorAll(".exemplo");
+            for(i=0;i<x.length;i++){
+                x[i].innerHTML = "Olá Mundo" + (i+1);
+            }
+        }
+    </script>
+</body>
+</html>
