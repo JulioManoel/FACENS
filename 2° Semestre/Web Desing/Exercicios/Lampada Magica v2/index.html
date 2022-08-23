@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="keywords" content="lampada, javascript, lida, desligam pisca-pisca"> <!-- Palavras Chaves -->
+        <meta name="description" content="Liga e Desliga lampada"> <!-- Descrição -->
+        <meta name="author" content="Julio Cesar Bonoe Manoel"> <!-- Autores -->
+        <meta charset="UTF-8"> <!-- Set Acentuação -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Habilitar Responsivel -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lampada Magica v2</title>
+    </head>
+    <body>
+        <h1>Lampada Magica v2</h1>
+        <button id="idLigar" onmouseenter="Ligar()">Ligar</button>
+        <input id="idDesligar" type="button" value="Desligar">
+        <button id="idMostrar">Mostrar</button>
+        <button id="idEsconder">Esconder</button>
+        <button id="idTrocar">Trocar</button>
+        <button id="idPiscar" onclick="Piscar()">Piscar</button>
+        <br>
+        <img id="imagem" src="./img/luzDesligada.gif" alt="">
+
+        <script>
+            function Piscar(){
+                setInterval(Desligar,1000);
+                setInterval(Ligar, 1000);
+            }
+            
+            document.getElementById("idMostrar").addEventListener("click", function(){
+                document.getElementById("imagem").style.display = "block";
+            });
+            document.getElementById("idEsconder").addEventListener("click", function(){
+                document.getElementById("imagem").style.display = "none";
+            });
+            document.getElementById("idDesligar").addEventListener("mouseover", Desligar);
+
+            document.getElementById("idTrocar").addEventListener("mousemove", function(){
+                if(document.getElementById("imagem").getAttribute("src") == "./img/luzDesligada.gif"){
+                    Ligar();
+                }
+                else{
+                    Desligar();
+                }
+            })
+
+            function Desligar(){
+                //document.querySelector("img");
+                //var imag = document.getElementById("imagem");
+                //imag.src="./img/luzLigada.gif";
+                document.getElementById("imagem").src="./img/luzDesligada.gif"    
+            }
+
+            function Ligar(){
+                //document.querySelector("img");
+                //var imag = document.getElementById("imagem");
+                //imag.src="./img/luzLigada.gif";
+                document.getElementById("imagem").src="./img/luzLigada.gif"    
+            }
+        </script>
+    </body>
+</html>

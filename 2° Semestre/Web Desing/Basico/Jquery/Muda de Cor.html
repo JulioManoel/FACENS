@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function alteraCor1(){
+                var t1 = document.getElementById("paragrafo");
+                t1.style.backgroundColor = "#0000FF"
+            }
+            function alteraCor2(){
+                var t2 = document.querySelector("paragrafo");
+                t2.style.backgroundColor = "#00FF00"
+            }
+            function alteraCor3(){
+                $("#paragrafo").css("backgroundColor", "red");
+            }
+
+        </script>
+    </head>
+    <body>
+        <p id="paragrafo">Texto do Paragrafo!!</p>
+        
+        <button onclick="alteraCor1()">Altera Cor 1</button>
+        <button onclick="alteraCor2()">Altera Cor 2</button>
+        <button onclick="alteraCor3()">Altera Cor 3</button>
+    </body>
+</html>

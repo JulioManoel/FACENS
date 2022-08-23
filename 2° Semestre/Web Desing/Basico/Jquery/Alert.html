@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            //Javascripy
+            /*const btn = document.querySelector('button');
+            function btnJS(){
+                alert("Botão via Javascript");
+            }
+
+            btn.addEventListener('click', btnJS);*/
+
+            //Jquery
+            $(document).ready(function(){
+                $("button").on({
+                    click: function(){
+                        alert("Botão via JQuery");
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <button>Clique Aqui!</button>
+    </body>
+</html>

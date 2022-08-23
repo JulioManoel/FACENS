@@ -887,5 +887,3 @@ void consultaHisCon(historico *p){
 	}
 }
 //Fim do programa
-
-

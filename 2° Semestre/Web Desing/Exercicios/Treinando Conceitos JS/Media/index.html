@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo da média</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+  <h1> Cálculo da Média </h1>
+  <form>
+   <label for="idNome">Nome</label>
+   <input class="form-control" type="text" name="nome" id="idNome" >
+   <label for="idnota1">Nota 1</label>
+   <input class="form-control" type="text" name="notas" id="idNota1" onblur="Validar()" >
+   <label for="idnota2">Nota 2</label>
+   <input class="form-control" type="text" name="notas" id="idNota2" >
+   <label for="idnota3">Nota 3</label>
+   <input class="form-control" type="text" name="notas" id="idNota3" >
+
+   <label for="idmedia">Média</label>
+   <input class="form-control" type="text" name="media" id="idMedia" readonly>
+
+   <input class="btn btn-outline-primary" type="button" value="Cálculo da Média" onmousemove="CalcularMedia()" >
+
+  </form>
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #ligado{
+                display: none;
+            }
+        </style>
+        <script>
+            var i = 0;
+            function altera(){
+                if(i==1){
+                    $("#desligada").css("display","inline");
+                    $("#ligado").css("display","none");
+                    i=0;
+                }
+                else{
+                    $("#desligada").css("display","none");
+                    $("#ligado").css("display","inline");
+                    i=1;
+                }   
+                   
+            }
+            
+            
+        </script>
+        <title>Lampada Magica</title>
+    </head>
+    <body>
+        <h1>Lampada Magica</h1>
+        <img id="desligada" src="./img/luzDesligada.gif" alt="">
+        <img id="ligado" src="./img/luzLigada.gif" alt="">
+        <br>
+        <button onclick="altera()">Ligue a Lampada</button>
+    </body>
+</html>

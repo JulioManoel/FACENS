@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site Exemplo de Tabela</title>
+        <link rel="stylesheet" href="estilotabela.css">
+    </head>
+    <body>
+
+        <table>
+            <caption>Relatório de Vendas</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Vendedor</th>
+                    <th colspan="2">Setembro</th>
+                </tr>
+                <tr>
+                    <th scope="col">1° Quinzena</th>
+                    <th scope="col">2° Quinzena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lucas Murilo</td>
+                    <td>R$300.000,00</td>
+                    <td>R$350.000,00</td>
+                </tr>
+                <tr class="greenC">
+                    <td>Luiz Felipe</td>
+                    <td>R$500.000,00</td>
+                    <td>R$150.000,00</td>
+                </tr>
+                <tr>
+                    <td>Eduardo</td>
+                    <td>R$50.000,00</td>
+                    <td>R$850.00,00</td>
+                </tr>
+                <tr class="greenC">
+                    <td>Matheus Zacarias</td>
+                    <td>R$150.000,00</td>
+                    <td>R$250.000,00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="col">Total</th>
+                    <td>R$1.100.00,00</td>
+                    <td>R$650.000,00</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </body>
+</html>
