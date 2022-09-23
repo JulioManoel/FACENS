@@ -34,6 +34,7 @@ ALTER TABLE ChaveComposta ADD Nome varchar(150) not null -- ALTER TABLE "nome da
 
 ALTER TABLE Modelo ADD NumeroLugares int
 ALTER TABLE Modelo ADD Tipo varchar(100)
+ALTER TABLE Modelo ADD data datetime
 
 ALTER TABLE Modelo ADD CHECK(Tipo in('Sedan', 'SUV', 'Hatch', 'Outros')) -- ALTER TABLE "nome da tabela" ADD CHECK("campo" in("restrições)) // Cria restrições
 ALTER TABLE Modelo ADD CONSTRAINT padraoLugares DEFAULT 5 FOR NumeroLugares -- ALTER TABLE "nome da tabela" ADD CONSTRAINT "nome da restrição" DEFAULT "valor default" FOR "campo" //Cria um default
@@ -46,3 +47,8 @@ ALTER TABLE Veiculo ADD Cores varchar(10)
 ALTER TABLE Veiculo ALTER COLUMN AnoFabricacao int not null -- ALTER TABLE "nome da tabela" ALTER COLUMN "campo" "oq quer modificar" // Altera tabela
 ALTER TABLE Veiculo ALTER COLUMN Cores varchar(50)
 ALTER TABLE Veiculo DROP COLUMN VouApagar -- ALTER TABLE "nome da tabela" DROP COLUMN "campo" // Apaga Campo
+
+
+
+select *from Modelo
+
