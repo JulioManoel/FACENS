@@ -7,7 +7,7 @@ select COUNT(*)	QtdeVeiculo from Veiculo
 -- Exivir a soma dos valores de todos os veículos (sum)
 select SUM(valor) from Veiculo
 
--- Exibir a media de valores  de todos os veículos (avg)
+-- Exibir a media de valores de todos os veículos (avg)
 select AVG(valor) from Veiculo
 
 -- Exibir o valor do veiculo mais barato
