@@ -2,8 +2,9 @@ const email = 'admin'
 const passoword = '123456'
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app"
-import { getFirestore, collection, addDoc } from "firebase/firestore"
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -18,17 +19,18 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app);
+const db = firebase.firestore();
 
-try {
-    const docRef = await addDoc(collection(db, "UserAdmin"), {
-      Email: email,
-      Password: passoword,
-    });
+db.collection("UserAdmin").add({
+    Email: email,
+    Password: passoword,
+})
+.then((docRef) => {
     console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-    console.error("Error adding document: ", e);
-}
+})
+.catch((error) => {
+    console.error("Error adding document: ", error);
+});
