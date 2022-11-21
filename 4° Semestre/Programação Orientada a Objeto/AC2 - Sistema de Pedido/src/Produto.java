@@ -24,6 +24,14 @@ public class Produto {
         produto.save();
     }
 
+    public String leitura() {
+        return Arquivo.Read(path);
+    }
+
+    public void print() {
+        System.out.println("Codigo: " + getCodigo() + "\tNome: "+ getNome() + "\tPreço: " + getPreco());
+    }
+
     public void save() {
         String string = getCodigo() + ';' + getNome() + ';' + getPreco();
         Arquivo.Push(path, string);
@@ -44,7 +52,6 @@ public class Produto {
                 return true;
             }
         }
-        System.out.println("Documento Invalido");
         return false;
     }
 

@@ -4,4 +4,6 @@ public interface Clientes{
     boolean busca(String documento);
     String getNome();
     String getDocumento();
+    String leitura();
+    void print();
 }

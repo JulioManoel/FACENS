@@ -18,6 +18,14 @@ public class PessoaFisica extends Cliente implements Clientes{
         setQtdePacelamento(qtdePacelamento);
     }
 
+    public String leitura() {
+        return Arquivo.Read(path);
+    }
+
+    public void print() {
+        System.out.println("Nome: " + getNome() + "\tEmail: "+ getEmail() + "\tDocumento: " + getDocumento() + "\tParcelamento Máximo: " + getQtdePacelamento());
+    }
+
     public void save() {
         String string = getNome() + ';' + getEmail() + ';' + getDocumento() + ';' + getQtdePacelamento();
         Arquivo.Push(path, string);

@@ -18,6 +18,14 @@ public class PessoaJuridica extends Cliente implements Clientes{
         setPrazoFaturamento(prazoFaturamento);
     }
 
+    public String leitura() {
+        return Arquivo.Read(path);
+    }
+
+    public void print(){
+        System.out.println("Nome: " + getNome() + "\tEmail: "+ getEmail() + "\tDocumento: " + getDocumento() + "\tPrazo Faturamento Máximo: " + getPrazoFaturamento());
+    }
+
     public void save(){
         String string = getNome() + ';' + getEmail() + ';' + getDocumento() + ';' + getPrazoFaturamento();
         Arquivo.Push(path, string);

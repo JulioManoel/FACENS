@@ -54,7 +54,28 @@ public abstract class Arquivo {
                 gravarArq.close();
                 return true;
             }catch(IOException e){
-                System.out.println(e.getMessage());
+                return false;
+            }
+        }
+    }
+    public static boolean Update(String path, String texto, int linha){
+        String conteudo = Read(path);
+        if(conteudo.isEmpty())
+            return false;
+        else{
+            String linhas[] = conteudo.split("\n");
+            linhas[linha] = texto;
+            conteudo = "";
+            for( String linhaString : linhas){
+                conteudo += linhaString + "\n"; 
+            }
+            try {
+                FileWriter arquivo = new FileWriter(path);
+                PrintWriter gravarArq = new PrintWriter(arquivo);
+                gravarArq.println(conteudo);
+                gravarArq.close();
+                return true;
+            }catch(IOException e){
                 return false;
             }
         }

@@ -22,6 +22,14 @@ public class Fornecedor {
         fornecedor.save();
     }
 
+    public String leitura() {
+        return Arquivo.Read(path);
+    }
+
+    public void print() {
+        System.out.println("Nome: " + getNome() + "\tEmail: "+ getCPNJ());
+    }
+
     public void save() {
         String string = getNome() + ';' + getCPNJ();
         Arquivo.Push(path, string);
