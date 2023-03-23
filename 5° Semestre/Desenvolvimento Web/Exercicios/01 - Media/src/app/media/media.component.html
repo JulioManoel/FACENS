@@ -1,0 +1,28 @@
+<h1 class="display-2">Calcular média</h1>
+
+<div class="mb-3">
+    <label for="ac1" class="form-label">AC1</label>
+    <input type="number" class="form-control" id="ac1" [(ngModel)]="ac1">
+</div>
+
+<div class="mb-3">
+    <label for="ac2" class="form-label">AC2</label>
+    <input type="number" class="form-control" id="ac2" [(ngModel)]="ac2">
+</div>
+
+<div class="mb-3">
+    <label for="ag" class="form-label">AG</label>
+    <input type="number" class="form-control" id="ag" [(ngModel)]="ag">
+</div>
+
+<div class="mb-3">
+    <label for="af" class="form-label">AF</label>
+    <input type="number" class="form-control" id="af" [(ngModel)]="af">
+</div>
+
+<button class="btn btn-primary me-3" (click)="calcularMedia()">Calcular</button>
+<button class="btn btn-light" (click)="media=undefined">Limpar</button>
+
+<div class="text-center" *ngIf="mediaFilled()">
+    {{aprovado}} pois sua nota é {{media}}
+</div>

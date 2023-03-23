@@ -1,0 +1,28 @@
+<h1>Cadastro de Alunos</h1>
+
+<div class="mb-3">
+    <label for="" class="form-label">RA:</label>
+    <input type="number" class="form-control" [(ngModel)]="registroAluno" required>
+</div>
+
+<div class="mb-3">
+    <label for="" class="form-label">Nome:</label>
+    <input type="text" class="form-control" [(ngModel)]="nome" required>
+</div>
+
+<div class="mb-3">
+    <label for="" class="form-label">Email:</label>
+    <input type="email" class="form-control" [(ngModel)]="email" required>
+</div>
+
+<div class="mb-3">
+    <label for="" class="form-label">Celular:</label>
+    <input type="tel" class="form-control" [(ngModel)]="celular" required>
+</div>
+
+<button class="btn btn-primary" (click)="submit()">Enviar</button>
+<button class="btn btn-light">Limpar</button>
+
+<div class="text-center" *ngIf="enviado">
+    Enviado com Sucesso
+</div>

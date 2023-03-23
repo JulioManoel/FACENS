@@ -1,0 +1,24 @@
+<ul class="list-group mt-2">
+    <li class="list-group-item" *ngFor="let carro of carros">
+        <a href="/carro/{{carro.id}}" class="lead">{{carro.name}}</a>
+    </li>
+</ul>
+
+<!-- <table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let carro of carros">
+            <td>{{carro.id}}</td>
+            <td>{{carro.name}}</td>
+            <td>{{carro.year}}</td>
+            <td>{{carro.price}}</td>
+        </tr>
+    </tbody>
+</table> -->
