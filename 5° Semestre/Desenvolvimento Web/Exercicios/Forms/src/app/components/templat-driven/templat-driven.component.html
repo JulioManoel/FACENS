@@ -1,0 +1,40 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nome:</label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="name" required>
+    <div *ngIf="form.controls['name']?.errors?.['required'] && form.controls['name']?.touched">
+      <p class="text-danger">Campo Obrigatorio</p>
+    </div>
+
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" class="form-control" [(ngModel)]="email" required email>
+    <div *ngIf="form.controls['email']?.errors?.['required'] && form.controls['email']?.touched">
+      <p class="text-danger">Campo Obrigatorio</p>
+    </div>
+    <div *ngIf="form.controls['email']?.errors?.['email']">
+      <p class="text-danger">E-mail Incorreto</p>
+    </div>
+
+    <label for="password">Senha:</label>
+    <input type="password" name="password" class="form-control" [(ngModel)]="password" required minlength="6" maxlength="20">
+    <div *ngIf="form.controls['password']?.errors?.['required'] && form.controls['password']?.touched">
+      <p class="text-danger">Campo Obrigatorio</p>
+    </div>
+    <div *ngIf="form.controls['password']?.errors?.['minlength'] && form.controls['password']?.touched">
+      <p class="text-danger">Senha Pequena</p>
+    </div>
+    <label for="confirmacao">Confirmação de Senha:</label>
+    <input type="password" name="confirmacao" class="form-control" [(ngModel)]="confirma" required minlength="6" maxlength="20">
+    <div *ngIf="form.controls['confirmacao']?.errors?.['required'] && form.controls['confirmacao']?.touched">
+      <p class="text-danger">Campo Obrigatorio</p>
+    </div>
+    <div *ngIf="confirma !== password && form.controls['confirmacao']?.touched">
+      <p class="text-danger">Senhas não Conhecidem</p>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!form.form.valid">Submit</button>
+  </div>
+</form>
+
+<div *ngIf="form.submitted">
+  <p class="text-success">Usuaria Cadastrado com Sucesso</p>
+</div>
