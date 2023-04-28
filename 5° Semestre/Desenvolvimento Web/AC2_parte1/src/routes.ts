@@ -1,6 +1,7 @@
-import { Router, Request, Response } from 'express'
+import { Router, } from 'express'
+import UserController from './controllers/UserController'
 
 export const route = Router()
-route.get('/', (request: Request, response: Response) => {
-    response.json({ message: 'hello' })
-})
+route.get('/users', UserController.list)
+route.post('/user', UserController.create)
+route.delete('/delethanos', UserController.delete)

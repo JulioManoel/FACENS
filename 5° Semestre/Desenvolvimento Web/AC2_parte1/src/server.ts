@@ -3,7 +3,7 @@ import { route } from './routes'
 import mongoose from 'mongoose'
 
 // Configuraçaõ MongoDB
-mongoose.connect('mongodb://127.0.0.1:2017/ac2Parte1')
+mongoose.connect('mongodb://127.0.0.1:27017/ac2Parte1')
     .then(() => console.log('MongoDB Conectado com Sucesso'))
     .catch((error) => console.log(`Erro ao conectar com o banco: ${error}`))
 
