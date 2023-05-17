@@ -8,13 +8,13 @@ class UserController {
     }
 
     async create(request: Request, response: Response) {
-        const {name} = request.body
+        const {name, age} = request.body
         try {
-            const user = await User.create({name})
+            const user = await User.create({name, age})
             response.status(200).json(user);
         } catch(error) {
             response.status(500).json({ error: "Erro ao criar usuário", message: error})
-        }
+        }   
     }
 
     async update(request: Request, response: Response) {
