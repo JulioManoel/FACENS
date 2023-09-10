@@ -25,11 +25,12 @@ void Vendedor();
 void CadastraVendedores();
 void ListarVendedores();
 
-void main(){ //função main
+int main(){ //função main
 	setlocale(LC_ALL, "portuguese"); //set linguagem
 	system("title Sistema para Comércios"); //título
 	system("mkdir Dados"); //cria pasta
 	Menu(); //chama função Menu
+	return 0;
 }
 
 void Menu(){ //função Menu

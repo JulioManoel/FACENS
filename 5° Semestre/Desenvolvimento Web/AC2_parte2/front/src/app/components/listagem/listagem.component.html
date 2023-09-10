@@ -1,0 +1,18 @@
+<table class="table table-light">
+  <thead>
+    <tr>
+      <td>Nome</td>
+      <td>Pokemon Favorito</td>
+      <td>Edição</td>
+      <td>Exibição</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jogador of jogadores">
+      <td>{{jogador.name}}</td>
+      <td>{{jogador.pokemon}}</td>
+      <td><button (click)="edicao(jogador._id)">Edição</button></td>
+      <td><button (click)="exibicao(jogador._id)">Exibição</button></td>
+    </tr>
+  </tbody>
+</table>

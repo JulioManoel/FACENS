@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+  <label>Nome: </label>
+  <input type="text" formControlName="nome">
+  <label>Pokemon: </label>
+  <select formControlName="pokemon">
+    <option value="{{pokemon.name}}" *ngFor="let pokemon of pokemons">{{pokemon.name}}</option>
+  </select>
+  <button (click)="cadastrar()">Cadastrar</button>
+</form>
