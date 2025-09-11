@@ -1,0 +1,119 @@
+POST / HTTP/1.1
+Host: localhost:50007
+Accept-Encoding: gzip
+Content-Type: text/xml
+User-Agent: Python-xmlrpc/3.12
+Content-Length: 112
+
+<?xml version='1.0'?>
+<methodCall>
+  <methodName>system.listMethods</methodName>
+  <params></params>
+</methodCall>
+
+HTTP/1.0 200 OK
+header: Server: BaseHTTP/0.6 Python/3.12.3
+header: Date: Thu, 11 Sep 2025 19:49:56 GMT
+header: Content-type: text/xml
+header: Content-length: 366
+
+<?xml version='1.0'?>
+<methodResponse>
+  <params>
+    <param>
+      <value>
+        <array>
+          <data>
+            <value>
+              <string>add</string>
+            </value>
+            <value>
+              <string>mul</string>
+            </value>
+            <value>
+              <string>system.listMethods</string>
+            </value>
+            <value>
+              <string>system.methodHelp</string>
+            </value>
+            <value>
+              <string>system.methodSignature</string>
+            </value>
+          </data>
+        </array>
+      </value>
+    </param>
+  </params>
+</methodResponse>
+
+POST / HTTP/1.1
+Host: localhost:50007
+Accept-Encoding: gzip
+Content-Type: text/xml
+User-Agent: Python-xmlrpc/3.12
+Content-Length: 164
+
+<?xml version='1.0'?>
+<methodCall>
+  <methodName>system.methodHelp</methodName>
+  <params>
+    <param>
+      <value>
+        <string>add</string>
+      </value>
+    </param>
+  </params>
+</methodCall>
+
+HTTP/1.0 200 OK
+header: Server: BaseHTTP/0.6 Python/3.12.3
+header: Date: Thu, 11 Sep 2025 19:49:56 GMT
+header: Content-type: text/xml
+header: Content-length: 230
+
+<?xml version='1.0'?>
+<methodResponse>
+  <params>
+    <param>
+      <value>
+        <string>Metodo para adicao de dois inteiros\nParamtros: a -&gt; int\n           b -&gt; int\nRetorno: a+b -&gt; int</string>
+      </value>
+    </param>
+  </params>
+</methodResponse>
+
+POST / HTTP/1.1
+Host: localhost:50007
+Accept-Encoding: gzip
+Content-Type: text/xml
+User-Agent: Python-xmlrpc/3.12
+Content-Length: 169
+
+<?xml version='1.0'?>
+<methodCall>
+  <methodName>system.methodSignature</methodName>
+  <params>
+    <param>
+      <value>
+        <string>add</string>
+      </value>
+    </param>
+  </params>
+</methodCall>"
+
+HTTP/1.0 200 OK
+header: Server: BaseHTTP/0.6 Python/3.12.3
+header: Date: Thu, 11 Sep 2025 19:49:56 GMT
+header: Content-type: text/xml
+header: Content-length: 150
+
+<?xml version='1.0'?>
+<methodResponse>
+  <params>
+    <param>
+      <value>
+        <string>signatures not supported</string>
+      </value>
+    </param>
+  </params>
+</methodResponse>
