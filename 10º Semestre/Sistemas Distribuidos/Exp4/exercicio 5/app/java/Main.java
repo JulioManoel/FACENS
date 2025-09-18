@@ -5,7 +5,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         if (args.length == 0) encode();
         else decode(args[0]);
     }
