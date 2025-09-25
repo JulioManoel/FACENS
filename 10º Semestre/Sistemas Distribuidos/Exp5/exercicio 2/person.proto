@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package demo;
+option java_package = "demo";
+option java_outer_classname = "PersonProto";
+
+message Person {
+  string Name = 1;
+  int32  EnrollNumber = 2;
+  double Height = 3;
+  repeated int32 LuckNumbers = 4;
+}

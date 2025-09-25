@@ -1,0 +1,27 @@
+syntax="proto3";
+
+package cp117;
+
+option java_multiple_files = true;
+option java_package = "com.cp117.grpc";
+
+service ContactsManager {
+  rpc CreateContact (Person) returns (ContactId) {}
+  rpc RetrieveContact (ContactId) returns (Person) {}
+  rpc DeleteContact (ContactId) returns (DeleteContactResponse) {}
+}
+
+message ContactId {
+    int32 Id = 1;
+}
+
+message DeleteContactResponse {
+    string Result = 1;
+}
+
+message Person {
+    string Name = 1;
+    int32 EnrollNumber = 2;
+    float Height = 3;
+    repeated int32 LuckNumbers = 4;
+}
